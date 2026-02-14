@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Torre de Hanoi</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="top">
+    <h1>Torre de Hanoi</h1>
+
+    <div class="controls">
+      <label>
+        Discos:
+        <select id="diskCount">
+          <option>3</option>
+          <option selected>4</option>
+          <option>5</option>
+          <option>6</option>
+        </select>
+      </label>
+
+      <button id="btnReset">Reiniciar</button>
+      <button id="btnSolve">Auto-solver</button>
+
+      <div class="stats">
+        Movimientos: <span id="moves">0</span>
+        | Mínimo: <span id="minMoves">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="board">
+    <section class="tower" data-tower="A">
+      <h2>A</h2>
+      <div class="pole"></div>
+      <div class="stack" id="towerA"></div>
+    </section>
+
+    <section class="tower" data-tower="B">
+      <h2>B</h2>
+      <div class="pole"></div>
+      <div class="stack" id="towerB"></div>
+    </section>
+
+    <section class="tower" data-tower="C">
+      <h2>C</h2>
+      <div class="pole"></div>
+      <div class="stack" id="towerC"></div>
+    </section>
+  </main>
+
+  <footer class="hint">
+    Tip: clic en una torre para “tomar” el disco superior; clic en otra para soltarlo.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
